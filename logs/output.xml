@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20220923 17:27:18.143" rpa="false" schemaversion="3">
+<suite id="s1" name="Open Google" source="/home/matheusrb/Desktop/Robot Example/fkw-robot-example/tests/open_google.robot">
+<test id="s1-t1" name="Search Furukawa" line="13">
+<kw name="Search" library="open_google">
+<arg>Furukawa</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 17:27:18.258" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220923 17:27:18.258" endtime="20220923 17:27:20.239"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${SearchWord}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 17:27:20.240" level="INFO">Typing text 'Furukawa' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20220923 17:27:20.239" endtime="20220923 17:27:20.325"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220923 17:27:20.326" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20220923 17:27:20.603" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220923 17:27:20.603" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220923 17:27:20.325" endtime="20220923 17:27:22.936"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220923 17:27:25.937" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220923 17:27:22.936" endtime="20220923 17:27:25.937"/>
+</kw>
+<status status="PASS" starttime="20220923 17:27:18.257" endtime="20220923 17:27:25.938"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 17:27:25.939" endtime="20220923 17:27:26.002"/>
+</kw>
+<status status="PASS" starttime="20220923 17:27:18.257" endtime="20220923 17:27:26.002"/>
+</test>
+<doc>Abrir o Google e pesquisar "Furukawa"</doc>
+<status status="PASS" starttime="20220923 17:27:18.144" endtime="20220923 17:27:26.003"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Open Google">Open Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
