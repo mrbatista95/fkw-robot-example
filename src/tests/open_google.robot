@@ -1,7 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ../src/open_google.robot
-
+Resource  ../open_google.robot
 
 *** Variables ***
 ${URL}        https://www.google.com/
@@ -13,5 +12,3 @@ ${SEARCH_STRING}    Furukawa
 Search Furukawa
 	Search        ${SEARCH_STRING}
 	[Teardown]    Close Browser
-
-*** Keywords ***
