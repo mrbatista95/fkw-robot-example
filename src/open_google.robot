@@ -3,9 +3,9 @@ Library    SeleniumLibrary
 
 *** Keywords ***
 Search
-    ${URL}      Set Variable	https://www.google.com/
-	${BROWSER}        Set Variable    Chrome
-    ${LOCATOR}    Set Variable    name:q
+    ${URL}            Set Variable	    https://www.google.com/
+	${BROWSER}        Set Variable      Chrome
+    ${LOCATOR}        Set Variable      name:q
 
 	[Arguments]     ${SearchWord}
 	Open Browser    ${URL}           ${BROWSER}
