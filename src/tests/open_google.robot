@@ -1,14 +1,11 @@
 *** Settings ***
-Library  SeleniumLibrary
-Resource  ../open_google.robot
+Library     SeleniumLibrary
+Resource    ../open_google.robot
 
-*** Variables ***
-${URL}        https://www.google.com/
-${BROWSER}    Chrome
-${LOCATOR}    name:q
-${SEARCH_STRING}    Furukawa
 
 *** Test Cases ***
 Search Furukawa
-	Search        ${SEARCH_STRING}
-	[Teardown]    Close Browser
+    ${SEARCH_STRING}    Set Variable	Furukawa
+    
+    Search    ${SEARCH_STRING}
+    [Teardown]    Close Browser
