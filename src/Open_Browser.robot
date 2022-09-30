@@ -4,7 +4,8 @@ Resource    ./base.robot
 
 
 *** Keywords ***
-Open
+Open Browser on Google
 
-    [Arguments]    ${URL}    ${BROWSER}
-    Open Browser    ${URL}    ${BROWSER}
+    ${object}    Get JSON Values
+
+    Open Browser    ${object["common"]["url"]}    ${object["common"]["browser"]}

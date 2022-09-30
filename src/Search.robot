@@ -1,16 +1,12 @@
 *** Settings ***
 
 Resource    ./base.robot
-Resource    ../json/GetJSON.robot
 Resource    ./Open_Browser.robot
+Resource    ./Search_Furukawa.robot
 
 
 *** Keywords ***
 Search
-
-    ${object}    Get JSON Values
-
-    Open    ${object["common"]["url"]}    ${object["common"]["browser"]}
-    Input Text    ${object["common"]["xpath_search_bar"]}    ${object["search2"]["search_string"]}
-    Press Keys    ${object["common"]["xpath_search_bar"]}    RETURN
+    Open Browser on Google
+    Search Furukawa
     Sleep    3s
