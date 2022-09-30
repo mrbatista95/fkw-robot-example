@@ -1,15 +1,16 @@
 *** Settings ***
-Library     SeleniumLibrary
+
+Resource    ./base.robot
+Resource    ../json/GetJSON.robot
+Resource    ./Open_Browser.robot
 
 
 *** Keywords ***
 Search
-    [Arguments]    ${SEARCH_STRING}
-    ${URL}    Set Variable    https://www.google.com/
-    ${BROWSER}    Set Variable    Chrome
-    ${LOCATOR}    Set Variable    xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input
 
-    Open Browser    ${URL}    ${BROWSER}
-    Input Text    ${LOCATOR}    ${SEARCH_STRING}
-    Press Keys    ${LOCATOR}    RETURN
+    ${object}    Get JSON Values
+
+    Open    ${object["common"]["url"]}    ${object["common"]["browser"]}
+    Input Text    ${object["common"]["xpath_search_bar"]}    ${object["search2"]["search_string"]}
+    Press Keys    ${object["common"]["xpath_search_bar"]}    RETURN
     Sleep    3s

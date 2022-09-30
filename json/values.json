@@ -1,4 +1,13 @@
 {
-    "search": "Furukawa",
-    "search2": "Furukawa2"
+    "common":{
+        "url": "https://www.google.com/",
+        "browser": "Chrome",
+        "xpath_search_bar": "xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"
+    },
+    "search1":{
+        "search_string": "Furukawa1"
+    },
+    "search2":{
+        "search_string": "Furukawa2"
+    }
 }
