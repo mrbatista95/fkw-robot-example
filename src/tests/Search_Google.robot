@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource    ../src/Search.robot
+Resource    ../modules/Search.robot
 
 *** Test Cases ***
 

@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource    ./base.robot
+Resource    ../shared/base.robot
 Resource    ./Open_Browser.robot
 Resource    ./Search_Furukawa.robot
 

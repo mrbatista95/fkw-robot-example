@@ -2,4 +2,4 @@
 
 Library     SeleniumLibrary
 
-Resource    ../json/GetJSON.robot
+Resource    ./GetJSON.robot
